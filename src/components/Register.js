@@ -3,15 +3,16 @@ import {useState} from 'react'
 
 function Register() {
 
-    const [Author,setAuthor] = useState("")
-  const [bookName,setBookName] = useState("");
+    
+  const [BookName,setBookName] = useState("");
   const [Description,setDescription] = useState("");
-  const [pages,setPages]  = useState("");
+  const [Pages,setPages]  = useState("");
+  const [Author,setAuthor] = useState("")
   const [Publisher,setPublisher] = useState("")
 
   const registeruser=()=>{ // this function will get executed when clicked on "Register Book"
 
-    if(!Author || !bookName || !Description || !pages || !Publisher)    // validation for fields, none should be empty
+    if(!Author || !BookName || !Description || !Pages || !Publisher)    // validation for fields, none should be empty
     {
       alert("All Fields are Mandotary")
       return;
@@ -30,7 +31,7 @@ function Register() {
     // .catch((e)=> console.log("error is",e))
   
     
-    console.log({Author, bookName,Description,pages,Publisher});
+    console.log({BookName,Description,Pages,Author,Publisher});
 
      alert("book created succesfully")  // if Book is registered it will give this alert
   }
